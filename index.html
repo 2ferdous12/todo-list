@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app-w</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+    ul li{
+        list-style: none;
+        font-size: 17px;
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        position: relative;
+        cursor: pointer;
+    }
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: -10px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+position: absolute;
+right: 0;
+top: 5px;
+width: 40px;
+height: 40px;
+font-size: 22px;
+color: #555;
+line-height: 40px;
+text-align: center;
+margin-right: -100px;
+}
+
+ul li span:hover{
+    background-color: burlywood;
+}
+</style>
+</head>
+<body>
+   <main class="lg:w-[1100px] mx-auto p-10">
+    <div class="text-center flex justify-center items-center m-10">
+        <div class="lg:w-[350px] bg-gray-300 flex ">
+            <input id="input-box" class="flex-1  h-[60px] text-xl pl-4 rounded-full" type="text" 
+            placeholder="enter city name"
+            spellcheck="false">
+            <button onclick="addTask()" class="bg-white ml-4 h-[60px] cursor-pointer rounded-full w-[60px] flex justify-center items-center">
+            <img class="w-[20px] " src="images/search.png" alt=""></button>
+        </div>
+
+
+
+    </div>
+<div class="text-center flex justify-center items-center">
+    <div>
+        <ul class="name" id="list-container"> 
+            <!-- <li class="checked">task 1</li>
+            <li>task 2</li>
+            <li>task 3</li> -->
+          </ul>
+    </div>
+</div>
+<!-- <div class="flex justify-center items-center ">
+    <div class="text-center">
+        <img class="" src="images/rain.png" alt="">
+        <h1 class="text-amber-600 font-bold text-3xl">22'c</h1>
+        <h2 class="font-bold text-4xl">New York</h2>
+    </div>
+</div>
+<div class="flex gap-20 mt-4 justify-center items-center">
+    <div>
+        <img src="images/humidity.png" alt="">
+        <div class="mt-2">
+            <p class="text-3xl text-yellow-400 font-bold" >50%</p>
+            <p class="font-bold text-4xl">humidity</p>
+        </div>
+    </div>
+    <div>
+        <img src="images/wind.png" alt="">
+        <div>
+            <p class="text-3xl text-yellow-400 font-bold">15 km/h</p>
+            <p class="font-bold text-4xl">Wind Speed</p>
+        </div>
+    </div>
+</div> -->
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
